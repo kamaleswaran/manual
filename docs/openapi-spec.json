@@ -1,0 +1,142 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "9.2.0",
+      "title": "@fastify/swagger"
+    },
+    "definitions": {
+      
+    },
+    "paths": {
+      "/health": {
+        "get": {
+          "tags": [
+            "health-check"
+          ],
+          "responses": {
+            "200": {
+              "description": "Default Response",
+              "schema": {
+                
+              }
+            }
+          }
+        }
+      },
+      "/questions": {
+        "get": {
+          "tags": [
+            "manual"
+          ],
+          "responses": {
+            "200": {
+              "description": "Default Response",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "options": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "text": {
+                            "type": "string"
+                          },
+                          "followup_question": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "id"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "text",
+                          "followup_question"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "text",
+                    "options"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "/recommended-products": {
+        "post": {
+          "tags": [
+            "manual"
+          ],
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "selectedOptionId": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "selectedOptionId"
+                  ]
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Default Response",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
