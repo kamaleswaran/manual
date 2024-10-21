@@ -10,7 +10,9 @@ This repository is a Node.js application built using the Fastify framework. It i
 - **Fastify**: A fast and low-overhead web framework for Node.js.
 - **PostgreSQL**: A powerful, open-source object-relational database system.
 - **TypeORM**: An ORM for TypeScript and JavaScript (ES7, ES6, ES5) that works with PostgreSQL and other databases.
+- **Typebox**: A runtime type system for TypeScript, enabling type validation and serialization for better API design and TypeScript integration.
 - **Jest**: A delightful JavaScript testing framework with a focus on simplicity.
+- **Supertest**: A testing library for HTTP assertions, used to test API endpoints in your applications.
 
 ## Getting Started
 
