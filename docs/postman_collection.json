@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "f97651ba-dccb-4d90-9f3c-1d8050fc7feb",
+		"name": "Manual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39150230"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/questions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/recommended-products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 1,\n        \"selectedOptionId\": 1\n    },\n    {\n        \"id\": 2,\n        \"selectedOptionId\": 4\n    },\n    {\n        \"id\": 3,\n        \"selectedOptionId\": 8\n    },\n    {\n        \"id\": 6,\n        \"selectedOptionId\": 15\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/recommended-products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recommended-products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
